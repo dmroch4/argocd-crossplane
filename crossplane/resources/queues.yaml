@@ -2,10 +2,20 @@ apiVersion: sqs.aws.upbound.io/v1beta1
 kind: Queue
 metadata:
   name: crossplane-queue
-  namespace: crossplane-system
 spec:
   forProvider:
     name: crossplane-queue
+    region: us-east-1
+  providerConfigRef:
+    name: default
+
+---
+apiVersion: s3.aws.upbound.io/v1beta1
+kind: Bucket
+metadata:
+  generateName: crossplane-s3-
+spec:
+  forProvider:
     region: us-east-1
   providerConfigRef:
     name: default
