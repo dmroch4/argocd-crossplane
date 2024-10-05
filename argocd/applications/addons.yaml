@@ -6,7 +6,7 @@ metadata:
 spec:
   generators:
     - git:
-        repoURL: https://github.com/fabio-mrocha/argocd-crossplane.git
+        repoURL: https://github.com/dmroch4/argocd-crossplane.git
         revision: main
         files:
         - path: argocd/gitops/values-*.yaml
@@ -19,7 +19,7 @@ spec:
         namespace: '{{ chart.namespace }}'
       project: default
       sources:
-      - repoURL: https://github.com/fabio-mrocha/argocd-crossplane.git
+      - repoURL: https://github.com/dmroch4/argocd-crossplane.git
         targetRevision: main
         ref: gitops
       - repoURL: '{{ chart.url }}'

@@ -9,7 +9,7 @@ spec:
     namespace: argocd
   project: default
   source:
-    repoURL: https://github.com/fabio-mrocha/argocd-crossplane.git
+    repoURL: https://github.com/dmroch4/argocd-crossplane.git
     path: argocd/applications
     targetRevision: main
   syncPolicy:
