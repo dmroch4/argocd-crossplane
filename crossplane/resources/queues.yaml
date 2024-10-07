@@ -8,3 +8,12 @@ spec:
     region: us-east-1
   providerConfigRef:
     name: default
+---
+apiVersion: ecr.aws.upbound.io/v1beta1
+kind: Repository
+metadata:
+  name: crossplane-ecr
+spec:
+  forProvider:
+    imageTagMutability: IMMUTABLE
+    region: us-east-1
