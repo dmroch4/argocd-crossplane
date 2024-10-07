@@ -4,6 +4,7 @@ metadata:
   name: crossplane-queue
 spec:
   forProvider:
+    name: crossplane-queue
     region: us-east-1
   providerConfigRef:
     name: default
@@ -15,6 +16,7 @@ metadata:
   name: crossplane-queue-2
 spec:
   forProvider:
+    name: crossplane-queue
     region: us-east-1
   providerConfigRef:
     name: default
