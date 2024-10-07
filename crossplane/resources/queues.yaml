@@ -10,13 +10,17 @@ spec:
     name: default
 
 ---
-apiVersion: sqs.aws.upbound.io/v1beta1
-kind: Queue
+apiVersion: ecr.aws.crossplane.io/v1beta1
+kind: Repository
 metadata:
-  name: crossplane-queue-2
+  name: crossplane-ecr
+  labels:
+    region: us-east-1
 spec:
   forProvider:
-    name: crossplane-queue
     region: us-east-1
+    imageScanningConfiguration:
+      scanOnPush: true
+    imageTagMutability: IMMUTABLE
   providerConfigRef:
-    name: default
+    name: example
