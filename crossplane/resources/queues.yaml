@@ -10,7 +10,7 @@ spec:
     name: default
 
 ---
-apiVersion: ecr.aws.crossplane.io/v1beta1
+apiVersion: ecr.aws.upbound.io/v1beta1
 kind: Repository
 metadata:
   name: crossplane-ecr
